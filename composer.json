@@ -1,0 +1,34 @@
+{
+    "name": "x-laravel/model-settings-bag",
+    "description": "Add simple but flexible multiple settings to your Laravel models.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mehmet ÖĞMEN",
+            "email": "www@mehmetogmen.com.tr",
+            "homepage": "https://www.mehmetogmen.com.tr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-json": "*",
+        "illuminate/database": ">=5.5",
+        "illuminate/support": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "XLaravel\\ModelSettingsBag\\": "./src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "XLaravel\\EloquentSettingsBag"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
