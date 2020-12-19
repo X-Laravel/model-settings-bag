@@ -8,7 +8,7 @@ use XLaravel\ModelSettingsBag\Exceptions\Exception;
 trait HasSettingsBag
 {
     # Boot the HasSettingsBag trait.
-    public static function bootHasSettingsBag()
+    public static function bootHasSettingsBag(): void
     {
         self::creating(function ($model) {
             if (!$model->settings) {
@@ -38,7 +38,7 @@ trait HasSettingsBag
     }
 
     # Set the settings attribute.
-    public function setSettingsAttribute($settings)
+    public function setSettingsAttribute($settings): void
     {
         $this->attributes['settings'] = json_encode($settings);
     }

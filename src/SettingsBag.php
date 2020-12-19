@@ -7,7 +7,7 @@ use Illuminate\Support\Arr;
 
 class SettingsBag
 {
-    protected $model;
+    protected Model $model;
 
     public function __construct(Model $model)
     {
@@ -15,7 +15,7 @@ class SettingsBag
     }
 
     # Get the model's settings.
-    public function all()
+    public function all(): ?array
     {
         return $this->model->settings;
     }
