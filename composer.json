@@ -22,13 +22,6 @@
             "XLaravel\\ModelSettingsBag\\": "./src/"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "XLaravel\\EloquentSettingsBag"
-            ]
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
