@@ -17,7 +17,7 @@ class SettingsBag
     # Get the model's settings.
     public function all(): ?array
     {
-        return $this->model->settings;
+        return $this->model->settings ?: $this->model->getDefaultSettings();
     }
 
     # Apply the model's settings.

@@ -3,7 +3,6 @@
 namespace XLaravel\ModelSettingsBag;
 
 use Illuminate\Support\Arr;
-use XLaravel\ModelSettingsBag\Exceptions\Exception;
 
 trait HasSettingsBag
 {
@@ -50,11 +49,7 @@ trait HasSettingsBag
             return new SettingsBag($this);
         }
 
-        $settingRelation = $settingName . 'SettingsBag';
-        if (!method_exists($this, $settingRelation) || !in_array(__TRAIT__, class_uses($this->{$settingRelation}))) {
-            throw new Exception($settingName . ' setting not available on ' . get_class($this) . ' model');
-        }
-
+        $settingRelation = $settingName . 'Settings';
         $settingModel = $this->{$settingRelation};
         if ($settingModel === null) {
             $settingModel = $this->{$settingRelation}()->getRelated();
